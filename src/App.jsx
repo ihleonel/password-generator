@@ -1,3 +1,18 @@
+import { useState } from "react"
+
+const generator = () => {
+  const password = Math.random().toString(36).slice(-8)
+  return password
+}
+
 export default function App() {
-  return <div>Hello world!</div>;
+  const [password, setPassword] = useState('')
+  return (
+    <div>
+      <p>Password Generator</p>
+      <button onClick={() => setPassword(generator())}>Generate</button>
+      <div>{password}</div>
+      <button>Copy</button>
+    </div>
+  )
 }
