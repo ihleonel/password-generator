@@ -11,6 +11,8 @@ export default function App() {
   return (
     <div>
       <p>Password Generator</p>
+      <label htmlFor="length">Length</label>
+      <input type="number" id="length" name="length" />
       <button onClick={() => setPassword(result)}>Generate</button>
       <div>{password}</div>
       <button onClick={() => copy(password)}>Copy</button>
