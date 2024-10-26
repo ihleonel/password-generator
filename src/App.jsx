@@ -11,6 +11,10 @@ export default function App() {
   return (
     <div>
       <p>Password Generator</p>
+      <label>
+        <input type="checkbox" id="special" name="special" />
+        Include special characters
+      </label>
       <label htmlFor="length">Length</label>
       <input type="number" id="length" name="length" />
       <button onClick={() => setPassword(result)}>Generate</button>
