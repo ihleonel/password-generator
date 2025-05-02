@@ -8,11 +8,17 @@ const copy = (text) => {
 export default function App() {
   const result = usePasswordGenerator()
   const [password, setPassword] = useState('')
+  const [special, setSpecial] = useState(false)
   return (
     <div>
       <p>Password Generator</p>
       <label>
-        <input type="checkbox" id="special" name="special" />
+        <input
+          type="checkbox"
+          id="special"
+          name="special"
+          value={special}
+          onChange={setSpecial(!special)}/>
         Include special characters
       </label>
       <label htmlFor="length">Length</label>
