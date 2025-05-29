@@ -18,7 +18,7 @@ export default function App() {
           id="special"
           name="special"
           value={special}
-          onChange={setSpecial(!special)}/>
+          onChange={() => setSpecial(!special)}/>
         Include special characters
       </label>
       <label htmlFor="length">Length</label>
