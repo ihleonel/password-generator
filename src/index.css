@@ -2,3 +2,66 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #424242;
+  color: #e6e6e6;
+}
+
+.input {
+  border: solid 1px #e6e6e6;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #e6e6e6;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-primary:active {
+  background-color: #004085;
+  transform: scale(0.95);
+}
+
+.pass-container {
+  position: relative;
+  border: solid 1px #e6e6e6;
+  width: 400px;
+  padding: 1em;
+}
+
+.btn-copy {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-copy::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: -30px;
+  right: 0;
+  background-color: #333;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}

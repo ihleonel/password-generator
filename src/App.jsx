@@ -11,7 +11,7 @@ export default function App() {
   const [special, setSpecial] = useState(false)
   return (
     <>
-      <p>Password Generator</p>
+      <h3>Password Generator</h3>
       <label>
         <input
           type="checkbox"
@@ -22,10 +22,23 @@ export default function App() {
         Include special characters
       </label>
       <label htmlFor="length">Length</label>
-      <input type="number" id="length" name="length" />
-      <button onClick={() => setPassword(result)}>Generate</button>
-      <div>{password}</div>
-      <button onClick={() => copy(password)}>Copy</button>
+      <input type="number" className="input" id="length" name="length" value={result.length} readOnly/>
+      <button
+        className="btn-primary"
+        onClick={() => setPassword(result)}
+      >
+        Generate
+      </button>
+      <div className="pass-container">
+        <button
+          className="btn-primary btn-copy"
+          onClick={() => copy(password)}
+          dataTooltip="Copied!"
+        >
+          Copy
+        </button>
+        {password}
+      </div>
     </>
   )
 }
