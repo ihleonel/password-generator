@@ -10,7 +10,7 @@ export default function App() {
   const [password, setPassword] = useState('')
   const [special, setSpecial] = useState(false)
   return (
-    <div>
+    <>
       <p>Password Generator</p>
       <label>
         <input
@@ -26,6 +26,6 @@ export default function App() {
       <button onClick={() => setPassword(result)}>Generate</button>
       <div>{password}</div>
       <button onClick={() => copy(password)}>Copy</button>
-    </div>
+    </>
   )
 }
